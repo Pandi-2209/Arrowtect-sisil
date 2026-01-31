@@ -1,0 +1,1849 @@
+<!--index.html-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SISIL TEJAS | Empowering Skills</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil&family=Noto+Sans+Devanagari&family=Noto+Sans+Telugu&family=Noto+Sans+Malayalam&display=swap" rel="stylesheet">
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <!-- LOGO --> 
+   <img src="./images/sisil.png" class="logo" alt="SISIL TEJAS">
+  
+
+ 
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <ul class="nav-menu">
+
+      <li><a href="./index.html" class="nav-link active">Home</a></li>
+      <li><a href="./about.html" class="nav-link">About</a></li>
+
+      <nav class="navbar">
+  <ul class="nav-menu">
+    <li class="nav-item dropdown" id="servicesDropdown">
+
+      <button type="button" class="nav-link dropdown-toggle">
+        Services <span class="arrow">▾</span>
+      </button>
+
+      <ul class="dropdown-menu">
+        <li>
+          <a href="sd.html">Skill Development</a>
+        </li>
+        <li>
+          <a href="hr.html">HR Management</a>
+        </li>
+        <li>
+          <a href="consult.html">Corporate Consulting</a>
+        </li>
+        <li>
+          <a href="./textile.html">Textile ERP</a>
+        </li>
+      </ul>
+
+    </li>
+  </ul>
+</nav>
+
+
+
+
+      <li><a href="./merchandise.html" class="nav-link">Merchandise</a></li>
+      <li><a href="./contact.html" class="nav-link">Contact</a></li>
+
+<div class="sidebar">
+<a href="./assets/sisil-merchandise-brochure-2025.pdf" 
+   download class="brochure-btn ripple">
+   Brochure
+</a>
+
+<a href="login.html" id="loginBtn" class="login-btn ripple">Login</a>
+
+
+
+    <!-- PROFILE -->
+    <div class="profile" id="profileBox" style="display:none;">
+      <img id="profileImg" width="35" height="35" style="border-radius:50%;">
+      <span id="profileName"></span>
+
+      <div class="profile-menu">
+        <a href="profile.html">My Profile</a>
+        <a href="#" onclick="logout()">Logout</a>
+      </div>
+    </div>
+</div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <video autoplay muted loop>
+    <source src="./assets/ftvideo2.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-text">
+    <h1 data-lang="hero_title">EMPOWERING SKILLS<br>SHAPING FUTURES</h1>
+    <p data-lang="hero_sub">Building a skilled workforce for tomorrow</p>
+    <button id="discoverBtn" data-lang="discover">Discover More</button>
+  </div>
+</section>
+
+<!-- ABOUT + SERVICES -->
+<section class="about-services" id="about">
+
+  <!-- LEFT CONTENT -->
+  <div class="about-text reveal">
+    <span class="section-tag">ABOUT</span>
+    <h2>SISIL TEJAS</h2>
+
+    <p class="lead">
+      Specialized service provider committed to supporting the growth and
+      excellence of the garment and apparel industry.
+    </p>
+
+    <p>
+      Headquartered in Tamil Nadu, we offer a comprehensive range of
+      industry-focused solutions designed to meet the evolving needs of
+      textile and apparel businesses.
+    </p>
+
+    <p class="highlight">
+      With a deep understanding of the sector’s challenges, Sisil Tejas
+      delivers practical, scalable, and impactful solutions aligned with
+      India’s apparel ecosystem.
+    </p>
+  </div>
+
+  <!-- RIGHT SERVICES -->
+  <div class="service-grid reveal">
+
+    <div class="service-box">
+      <img src="./images/like.png" alt="">
+      <h4>Skill Development</h4>
+    </div>
+
+    <div class="service-box">
+      <img src="./images/human-resources.png" alt="">
+      <h4>HR & Payroll<br>Operations</h4>
+    </div>
+
+    <div class="service-box">
+      <img src="./images/polo.png" alt="">
+      <h4>Textile ERP</h4>
+    </div>
+
+    <div class="service-box">
+      <img src="./images/financial-advisor.png" alt="">
+      <h4>Corporate<br>Consulting</h4>
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILL DEVELOPMENT SECTION -->
+<section class="skill-section reveal">
+
+  <!-- LEFT IMAGES -->
+  <div class="skill-images">
+    <img src="./images/skilld.jpg" class="img-large" alt="">
+    <img src="./images/skilld2.jpg" class="img-small" alt="">
+
+    <div class="experience-badge">
+      <strong>30+</strong>
+      <span>Years of<br>Experience</span>
+    </div>
+  </div>
+</section>
+  <!-- RIGHT CONTENT -->
+  <div class="skill-content">
+    <span class="section-tag">SKILL DEVELOPMENT</span>
+
+    <h1>
+      Empowering Skill<br>
+      Development &<br>
+      Growth.
+    </h1>
+
+    <h4>Your Trusted Partner for Workforce Excellence.</h4>
+
+    <p>
+      We help individuals and organizations unlock their true potential
+      through expert-led training, consulting, and project management
+      for the textile & apparel sector.
+    </p>
+
+    <!-- FEATURE LIST -->
+    <div class="skill-feature">
+      <div class="icon-circle">★</div>
+      <div>
+        <h5>Skill Development</h5>
+        <p>
+          Comprehensive technical and soft skill training designed to
+          enhance workforce productivity and quality standards.
+        </p>
+      </div>
+    </div>
+
+    <div class="skill-feature">
+      <div class="icon-circle">✔</div>
+      <div>
+        <h5>Expert Guidance</h5>
+        <p>
+          Our experienced consultants help organizations implement
+          effective and sustainable skill development solutions.
+        </p>
+      </div>
+    </div>
+
+    <!-- BUTTON -->
+    <a href="#" class="discover-btn">Discover More</a>
+  </div>
+
+</section>
+<section class="training-section">
+
+  <div class="training-header">
+    <span class="tag">TRAINING SERVICES</span>
+    <h2>Empowering Your Textile<br>Business</h2>
+    <p class="subtitle">Specialized solutions for industry growth.</p>
+  </div>
+
+  <div class="training-cards">
+
+    <!-- CARD 1 -->
+    <div class="training-card">
+      <img src="./images/technical.jpg" alt="">
+      <div class="card-overlay">
+        <h4>Technical & Soft<br>Skill Training</h4>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="training-card">
+      <img src="./images/gov.png" alt="">
+      <div class="card-overlay">
+        <h4>Government Skill<br>Development Projects</h4>
+      </div>
+    </div>
+
+    <!-- CARD 3 (VIDEO) -->
+    <div class="training-card">
+      <video autoplay muted loop>
+        <source src="./assets/ftvideo4.mp4" type="video/mp4">
+      </video>
+      <div class="card-overlay">
+        <h4>E-Learning for the<br>Textile Sector</h4>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="training-card">
+      <img src="./images/consult.jpg" alt="">
+      <div class="card-overlay">
+        <h4>Production Planning<br>& Optimization</h4>
+      </div>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="training-card">
+      <img src="./images/hr.jpg" alt="">
+      <div class="card-overlay">
+        <h4>Payroll & HR<br>Compliance Support</h4>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA BAR -->
+  <div class="training-cta">
+    <p>
+      Ready to elevate your team and streamline your textile business?
+      Discover how our training, e-learning, and compliance solutions can help you grow.
+    </p>
+    <a href="./assets/sisil-merchandise-brochure-2025.pdf" download class="cta-btn">
+      Download Brochure
+    </a>
+  </div>
+
+</section>
+<section class="partners-section">
+
+  <!-- Overlay -->
+  <div class="overlay"></div>
+
+  <div class="partners-content">
+
+    <span class="top-tag">EMPOWERING SOCIETY AND EMPOWERING LIVES</span>
+
+    <h2>
+      We're Skilled Professionals<br>
+      And Reputed Training Partners
+    </h2>
+
+    <div class="partners-cards">
+
+      <!-- Card 1 -->
+      <div class="partner-card">
+        <img src="./images/sc.jpg" alt="">
+        <div class="card-text">
+          <h4>Startegic Consultancy</h4>
+          <p>We help enhance skills and team potential.</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="partner-card">
+        <img src="./images/sus.avif" alt="">
+        <div class="card-text">
+          <h4>Sustainable Methodologies</h4>
+          <p>We build skills through long-lasting solutions.</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="partner-card">
+        <img src="./images/prac.jpg" alt="">
+        <div class="card-text">
+          <h4>Practical Solutions</h4>
+          <p>Crafting solutions that work in the real world.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="faq-section">
+
+  <!-- LEFT PANEL -->
+  <div class="faq-left">
+    <div class="left-box">
+      <div class="icon">📄</div>
+      <h3>
+        Trusted textile<br>
+        training &<br>
+        compliance<br>
+        partner
+      </h3>
+      <button class="quote-btn">GET A QUOTE</button>
+    </div>
+
+    <img src="images/meeting.png" alt="Meeting">
+  </div>
+
+  <!-- RIGHT PANEL -->
+  <div class="faq-right">
+
+    <span class="small-title">QUESTION ANSWERS</span>
+    <h2>Frequently Asked<br>Questions.</h2>
+
+    <div class="faq">
+     <div class="faq-item">
+       <button class="faq-question" onclick="toggleFAQ(this)">
+         What types of training programs do you offer for textile workers? 
+         <span>+</span> </button>
+          <div class="faq-answer">
+             We offer comprehensive technical and soft skill training programs tailored for the textile industry, including production techniques, quality control, safety protocols, and leadership development to enhance workforce capabilities. 
+            </div> 
+            </div>
+             <div class="faq-item"> 
+              <button class="faq-question" onclick="toggleFAQ(this)"> How can your e-learning solutions benefit our textile business?
+                <span>+</span>
+               </button>
+                <div class="faq-answer">
+                   Our e-learning platform provides flexible, cost-effective training for textile professionals, allowing employees to learn at their own pace while maintaining production schedules, with modules covering industry-specific skills and compliance requirements.
+                   </div> 
+    </div>
+    <div class="faq-item"> 
+              <button class="faq-question" onclick="toggleFAQ(this)">
+                What government skill development projects do you support?
+               </button>
+                <div class="faq-answer">
+                   We partner with government initiatives to deliver skill development programs for the textile sector, including PMKVY, NSDC projects, and state-level training schemes, helping bridge the skill gap in the industry.
+                   </div> 
+    </div>
+    <div class="faq-item"> 
+              <button class="faq-question" onclick="toggleFAQ(this)"> 
+                How do you help with production planning and optimization?
+                <span>+</span>
+               </button>
+                <div class="faq-answer">
+Our production planning services analyze your current processes, identify bottlenecks, and implement optimization strategies to improve efficiency, reduce costs, and enhance overall productivity in your textile operations.
+    </div>
+    </div>
+    <div class="faq-item"> 
+  <button class="faq-question" onclick="toggleFAQ(this)">
+     What HR compliance support do you provide?
+  <span>+</span>
+    </button>
+<div class="faq-answer">
+ We offer comprehensive payroll and HR compliance support, ensuring your textile business meets all labor laws, statutory requirements, and industry regulations while maintaining accurate employee records and timely compliance reporting.
+    </div>
+    </div>
+     
+    </div>
+    </div>
+</section>
+
+<section class="cta-section">
+
+  <!-- Overlay -->
+  <div class="overlay"></div>
+
+  <!-- Center Content -->
+  <div class="cta-box">
+    <h1>Skilled teams build strong businesses.</h1>
+    <p>Let us help you shape yours with expert training and development.</p>
+    <a href="#" class="cta-btn">GET STARTED WITH US</a>
+  </div>
+
+  <!-- Bottom Info Bar -->
+  <div class="info-bar">
+    <div class="info-item">
+      <span>📍</span>
+      <p> Tirupur, Tamil Nadu,<br>India</p>
+    </div>
+
+    <div class="info-item">
+      <span>✉️</span>
+      <p>info@sisil.in<br>+91 96000 82116</p>
+    </div>
+
+    <div class="info-item">
+      <span>⏰</span>
+      <p>Mon – Sat: 8:00 am to 6:00 pm<br>Sunday: CLOSED</p>
+    </div>
+  </div>
+
+</section>
+
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- ABOUT -->
+    <div class="footer-col">
+      <h3>About SISIL</h3>
+      <p>
+        SISIL Tejas India Private Limited is a leading provider of Skill
+        Development, HR Management, and Garment Manufacturing services,
+        committed to excellence and innovation.
+      </p>
+
+      <div class="logo">
+        <img src="images/sisil.png" alt="SISIL">
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="footer-col">
+      <h3>Our Services</h3>
+      <ul>
+        <li><a href="#">Skill Development</a></li>
+        <li><a href="#">HR Management</a></li>
+        <li><a href="#">Corporate Consulting</a></li>
+        <li><a href="#">Merchandise</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="footer-col">
+      <h3>Our Projects</h3>
+      <div class="project-grid">
+        <img src="images/p1.png">
+        <img src="images/p2.png">
+        <img src="images/p3.jpg">
+        <img src="images/p4.jpg">
+        <img src="images/p5.jpeg">
+        <img src="images/p6.jpg">
+      </div>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div class="footer-col">
+      <h3>Newsletter</h3>
+      <p>
+        Subscribe to our newsletter for latest updates on Skill Development,
+        HR Management, and Garment Manufacturing
+      </p>
+
+      <form class="newsletter">
+        <input type="email" placeholder="Email Address">
+        <button type="submit">➤</button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM BAR -->
+  <div class="footer-bottom">
+    <p>© Copyright 2024 by SISIL Tejas India Private Limited</p>
+    <p>Maintained By Arrowtect</p>
+  </div>
+
+</footer>
+
+
+    
+<!-- JS -->
+<script src="script.js"></script>
+<!-- AI CHAT BOT -->
+<div class="chatbot" id="chatbot">
+  <div class="chat-header">
+    <span>🤖 SISIL AI Assistant</span>
+    <button onclick="toggleBot()">×</button>
+  </div>
+
+  <div class="chat-body" id="chatBody">
+    <div class="bot-msg">Hello 👋 How can I help you today?</div>
+  </div>
+
+  <div class="chat-footer">
+    <input type="text" id="userInput" placeholder="Type your message...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+<button class="chat-toggle" onclick="toggleBot()">💬</button>
+
+
+
+</body>
+</html>
+<script src="./script.js"></script>
+
+<!--index.css-->
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(-45deg, #0b5ed7, #0dcaf0, #6610f2, #0b5ed7);
+  background-size: 500% 500%;
+  animation: gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ================= HEADER ================= */
+/* ================= HEADER ================= */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;              /* FIXED */
+  background:url(https://wallpapers.com/images/file/professional-portrait-background-uxsz9rmmyif9ckax.jpg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 60px;
+  z-index: 1000;
+  
+
+}
+
+/* LOGO */
+.logo {
+  height: 40px;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* MAIN MENU */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;               /* CONTROLS SPACING */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* LINKS */
+.nav-link {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 4px;        /* CLICK AREA */
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+}
+
+/* ================= DROPDOWN ================= */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+/* MENU */
+.dropdown-menu {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  min-width: 220px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  padding: 10px 0;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: all 0.3s ease;
+}
+
+/* OPEN */
+.dropdown.active .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown.active .arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 18px;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background: #f3f6ff;
+  color: #0b5ed7;
+  padding-left: 24px;
+}
+
+
+/* ================= RIGHT ACTIONS ================= */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.sidebar{
+  margin-left:500px;
+}
+
+/* BROCHURE */
+.brochure-btn {
+  padding: 8px 20px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-weight: 600;
+  color: #333;
+  background: #fff;
+  transition: 0.3s;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.brochure-btn:hover {
+  background: rgb(193, 193, 102);
+  transform: translateY(-4px);
+  
+}
+
+/* LOGIN */
+.login-btn {
+  background: #000;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.login-btn:hover{
+  background: #0b5ed7;
+  transform: translateY(-4px);
+  
+}
+
+
+/* ================= PROFILE ================= */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.profile-menu {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.2);
+  display: none;
+}
+
+.profile:hover .profile-menu {
+  display: block;
+}
+
+.profile-menu a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+}
+
+.hero{
+  height: 100vh;
+  position: relative;
+}
+
+.hero video {
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  
+  
+  
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  color:white;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  animation: fadeIn 2s;
+}
+
+.hero-text p {
+  margin: 10px 0;
+}
+
+.hero-text button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: #0b5ed7;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/*section*/
+.about-services {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 80px;
+  padding: 120px 80px;
+  align-items: center;
+  color: #fff;
+
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("https://static.vecteezy.com/system/resources/previews/010/847/581/non_2x/gradient-background-for-covers-wallpaper-social-media-web-design-and-many-other-vector.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* LEFT */
+.about-text h2 {
+  font-size: 42px;
+  margin: 15px 0;
+}
+
+.section-tag {
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #0b5ed7;
+  font-weight: 600;
+}
+
+.about-text p {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+  color: rgba(255,255,255,0.9);
+}
+
+.about-text .highlight {
+  font-weight: 600;
+}
+
+/* SERVICES */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.service-box {
+  background: #fff;
+  padding: 35px 25px;
+  border-radius: 14px;
+  box-shadow: 0 15px 30px rgba(11,94,215,0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.service-box img {
+  width: 48px;
+  margin-bottom: 18px;
+}
+
+.service-box h4 {
+  font-size: 17px;
+  color: #111;
+}
+
+/* HOVER */
+.service-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 55px rgba(11,94,215,0.35);
+}
+
+/* REVEAL ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-services {
+    grid-template-columns: 1fr;
+    padding: 80px 30px;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ================= SKILL SECTION ================= */
+.skill-section {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 90px;
+  padding: 120px 90px;
+  background:url(https://image.slidesdocs.com/responsive-images/background/line-professional-frame-blue-square-shape-business-powerpoint-background_9c874dd0f4__960_540.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+}
+
+/* LEFT IMAGES */
+.skill-images {
+  position: relative;
+}
+
+.img-large {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.img-small {
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 55%;
+  border-radius: 12px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+}
+
+/* EXPERIENCE BADGE */
+.experience-badge {
+  position: absolute;
+  bottom: 20px;
+  left: -30px;
+  background: #0b2d5e;
+  color: #fff;
+  padding: 18px 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.experience-badge strong {
+  font-size: 22px;
+}
+
+/* RIGHT CONTENT */
+.skill-content .section-tag {
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #0b5ed7;
+  font-weight: 600;
+}
+
+.skill-content h1 {
+  font-size: 44px;
+  line-height: 1.2;
+  margin: 20px 0;
+}
+
+.skill-content h4 {
+  color: #0b2d5e;
+  margin-bottom: 15px;
+}
+
+.skill-content p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+/* FEATURES */
+.skill-feature {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.icon-circle {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #eef4ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b5ed7;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.skill-feature h5 {
+  margin-bottom: 6px;
+}
+
+/* ================= BUTTON ANIMATION ================= */
+.discover-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 34px;
+  background: #0b2d5e;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.4s ease;
+}
+
+/* SLIDE SHINE EFFECT */
+.discover-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.6),
+    transparent
+  );
+  transition: 0.6s;
+}
+
+.discover-btn:hover::before {
+  left: 100%;
+}
+
+.discover-btn:hover {
+  background: #0b5ed7;
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(11,94,215,0.4);
+}
+.training-section {
+  padding: 90px 70px;
+  background: linear-gradient(135deg, #f6f7f9, #ffffff);
+}
+
+.training-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.training-header .tag {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #0b5ed7;
+  font-weight: 700;
+}
+
+.training-header h2 {
+  font-size: 44px;
+  font-weight: 800;
+  color: #111;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #666;
+}
+
+/* CARDS GRID */
+.training-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 22px;
+}
+
+/* CARD */
+.training-card {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  background: #000;
+}
+
+.training-card img,
+.training-card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+/* OVERLAY */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.2));
+  display: flex;
+  align-items: flex-end;
+  padding: 18px;
+}
+
+.card-overlay h4 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* HOVER EFFECT */
+.training-card:hover img,
+.training-card:hover video {
+  transform: scale(1.12);
+}
+
+/* CTA */
+.training-cta {
+  margin-top: 60px;
+  background: #17335f;
+  color: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.training-cta p {
+  max-width: 70%;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* BUTTON */
+.cta-btn {
+  background: #fff;
+  color: #17335f;
+  padding: 14px 26px;
+  border-radius: 6px;
+  font-weight: 700;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+/* BUTTON HOVER ANIMATION */
+.cta-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #0b5ed7;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+
+.cta-btn:hover {
+   background: #0b5ed7;
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(11,94,215,0.4);
+  color:#fff;
+}
+
+.cta-btn:hover::after {
+  transform: scaleX(1);
+}
+
+/* Chat Toggle Button */
+.chat-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #0b5ed7;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+.partners-section {
+  position: relative;
+  padding: 100px 80px;
+  background: url("./images/team.jpg") center/cover no-repeat;
+  color: #fff;
+}
+
+/* Dark overlay */
+.partners-section .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+}
+
+.partners-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+/* Top Tag */
+.top-tag {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #b5b5b5;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+/* Heading */
+.partners-content h2 {
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 60px;
+}
+
+/* Cards */
+.partners-cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Individual Card */
+.partner-card {
+  background: #fff;
+  color: #000;
+  width: 360px;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  transition: transform 0.4s ease;
+}
+
+.partner-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Image */
+.partner-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+/* Text */
+.card-text {
+  padding: 20px;
+  text-align: left;
+}
+
+.card-text h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card-text p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* MAIN SECTION */
+.faq-section {
+  display: flex;
+  max-width: 1400px;
+  margin: auto;
+  background: #fff;
+}
+
+/* LEFT */
+.faq-left {
+  width: 45%;
+  background: #1b1b1b;
+  display: flex;
+  padding: 40px;
+  gap: 20px;
+}
+
+.left-box {
+  background: #19345c;
+  color: #fff;
+  padding: 40px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.left-box .icon {
+  font-size: 34px;
+}
+
+.left-box h3 {
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+.quote-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.faq-left img {
+  width: 68%;
+  object-fit: cover;
+}
+
+/* RIGHT */
+.faq-right {
+  width: 55%;
+  padding: 60px;
+}
+
+.small-title {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #666;
+}
+
+.faq-right h2 {
+  font-size: 40px;
+  margin: 10px 0 40px;
+}
+
+/* FAQ */
+
+.faq-item.active .faq-question {
+  background: #19345c;
+  color: #fff;
+}
+
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; } 
+.faq-question { cursor: pointer; display: flex; justify-content: space-between; width: 100%; background: #f0f0f0; border: none; padding: 10px; font-size: 16px; } 
+.faq-item { margin-bottom: 10px; }
+
+.faq-answer.open {
+  max-height: 200px;
+  padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .faq-section {
+    flex-direction: column;
+  }
+
+  .faq-left,
+  .faq-right {
+    width: 100%;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.cta-section {
+  position: relative;
+  min-height: 90vh;
+  background: url("images/team.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dark Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(10, 20, 40, 0.85),
+    rgba(10, 20, 40, 0.85)
+  );
+}
+
+/* Center Box */
+.cta-box {
+  position: relative;
+  background: rgba(30, 60, 100, 0.9);
+  padding: 60px 80px;
+  text-align: center;
+  border-radius: 10px;
+  color: #fff;
+  max-width: 900px;
+  z-index: 2;
+}
+
+.cta-box h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.cta-box p {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: #ffffff;
+  color: #1e3c64;
+  padding: 14px 30px;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background: #dbe6f5;
+}
+
+/* Bottom Info Bar */
+.info-bar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: space-around;
+  padding: 25px 10%;
+  color: #ddd;
+  z-index: 3;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.info-item span {
+  font-size: 22px;
+  color: #3b82f6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .cta-box {
+    padding: 40px 25px;
+  }
+
+  .cta-box h1 {
+    font-size: 28px;
+  }
+
+  .info-bar {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .info-item {
+    justify-content: center;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.footer {
+  background: linear-gradient(135deg, #0b0b0b, #151515);
+  color: #bbb;
+  padding-top: 80px;
+}
+
+/* MAIN GRID */
+.footer-container {
+  max-width: 1400px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  padding: 0 60px 60px;
+}
+
+.footer-col h3 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* LOGO */
+.logo img {
+  margin-top: 30px;
+  width: 150px;
+}
+
+/* SERVICES */
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-col ul li a:hover {
+  color: #3b82f6;
+}
+
+/* PROJECT GRID */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.project-grid img {
+  width: 150px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+  height:100px;
+}
+
+.project-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* NEWSLETTER */
+.newsletter {
+  display: flex;
+  margin-top: 20px;
+}
+
+.newsletter input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.newsletter button {
+  background: #1e3c64;
+  border: none;
+  color: #fff;
+  padding: 0 18px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* BOTTOM BAR */
+.footer-bottom {
+  border-top: 1px solid #222;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #888;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    padding: 0 30px 50px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+/* Chatbot Box */
+.chatbot {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 320px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  display: none;
+  flex-direction: column;
+}
+
+/* Header */
+.chat-header {
+  background: #0b5ed7;
+  color: white;
+  padding: 12px;
+  border-radius: 15px 15px 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Body */
+.chat-body {
+  height: 260px;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.bot-msg, .user-msg {
+  margin: 8px 0;
+  padding: 8px 12px;
+  border-radius: 12px;
+  max-width: 85%;
+  font-size: 14px;
+}
+
+.bot-msg {
+  background: #f1f1f1;
+}
+
+.user-msg {
+  background: #0b5ed7;
+  color: #fff;
+  margin-left: auto;
+}
+
+/* Footer */
+.chat-footer {
+  display: flex;
+  padding: 10px;
+  gap: 5px;
+}
+
+.chat-footer input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.chat-footer button {
+  background: #0b5ed7;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+.logout-btn {
+  background: #dc3545;
+  color: #fff;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+/* ================= BUTTON RIPPLE ================= */
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ripple:active::after {
+  transform: scale(15);
+  opacity: 0;
+  transition: transform 0.6s, opacity 1s;
+}
+
+<!--index.js-->
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  /* ================= STICKY HEADER ================= */
+  const header = document.querySelector(".header");
+  window.addEventListener("scroll", () => {
+    header.classList.toggle("sticky", window.scrollY > 80);
+  });
+
+  /* ================= SERVICES DROPDOWN ================= */
+  const dropdown = document.getElementById("servicesDropdown");
+  let closeTimer;
+
+  dropdown.addEventListener("mouseenter", () => {
+    clearTimeout(closeTimer);
+    dropdown.classList.add("active");
+  });
+
+  dropdown.addEventListener("mouseleave", () => {
+    closeTimer = setTimeout(() => {
+      dropdown.classList.remove("active");
+    }, 250);
+  });
+
+  dropdown.querySelector(".dropdown-toggle")
+    .addEventListener("click", e => {
+      e.stopPropagation();
+      dropdown.classList.toggle("active");
+    });
+
+  document.addEventListener("click", () => {
+    dropdown.classList.remove("active");
+  });
+
+  /* ================= SERVICES PAGE LINKS ================= */
+  const servicePages = {
+    ".service-link": "./sd.html",
+    ".service-link2": "./hr.html",
+    ".service-link3": "./consult.html",
+    ".service-link4": "./textile.html"
+  };
+
+  Object.entries(servicePages).forEach(([selector, page]) => {
+    document.querySelectorAll(selector).forEach(link => {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        window.location.href = page;
+      });
+    });
+  });
+
+  /* ================= DISCOVER BUTTON ================= */
+  const discoverBtn = document.getElementById("discoverBtn");
+  if (discoverBtn) {
+    discoverBtn.addEventListener("click", () => {
+      document.querySelector("#about")
+        .scrollIntoView({ behavior: "smooth" });
+    });
+  }
+
+  /* ================= SCROLL REVEAL (SMOOTH & STABLE) ================= */
+  const reveals = document.querySelectorAll(".reveal");
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+          observer.unobserve(entry.target); // animate only once
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  reveals.forEach(el => observer.observe(el));
+
+});
+
+/* ================= LOGIN / PROFILE ================= */
+const user = JSON.parse(localStorage.getItem("user"));
+const loginBtn = document.getElementById("loginBtn");
+const profileBox = document.getElementById("profileBox");
+
+if (user && loginBtn && profileBox) {
+  loginBtn.style.display = "none";
+  profileBox.style.display = "flex";
+  document.getElementById("profileName").innerText = user.name;
+  document.getElementById("profileImg").src =
+    user.picture || `https://ui-avatars.com/api/?name=${user.name}`;
+}
+
+function logout() {
+  localStorage.removeItem("user");
+  window.location.href = "login.html";
+}
+
+/* ================= CHATBOT ================= */
+function toggleBot() {
+  const bot = document.getElementById("chatbot");
+  bot.style.display = bot.style.display === "flex" ? "none" : "flex";
+}
+
+function sendMessage() {
+  const input = document.getElementById("userInput");
+  const msg = input.value.trim();
+  if (!msg) return;
+
+  const chatBody = document.getElementById("chatBody");
+  chatBody.innerHTML += `<div class="user-msg">${msg}</div>`;
+  input.value = "";
+
+  setTimeout(() => {
+    chatBody.innerHTML += `<div class="bot-msg">${getBotReply(msg)}</div>`;
+    chatBody.scrollTop = chatBody.scrollHeight;
+  }, 600);
+}
+
+function getBotReply(msg) {
+  msg = msg.toLowerCase();
+  if (msg.includes("service")) return "We offer Skill Development, HR & Payroll, Textile ERP, and Corporate Consulting.";
+  if (msg.includes("contact")) return "You can contact us via email or phone listed on the Contact page.";
+  if (msg.includes("training")) return "We provide industry-focused skill training programs.";
+  if (msg.includes("hi") || msg.includes("hello")) return "Hello 👋 How can I assist you?";
+  return "Thanks for your message. Our team will get back to you soon.";
+}
+
+/* ================= FAQ ================= */
+function toggleFAQ(button) {
+  const item = button.parentElement;
+  const answer = item.querySelector(".faq-answer");
+  const icon = button.querySelector("span");
+
+  document.querySelectorAll(".faq-item").forEach(other => {
+    if (other !== item) {
+      other.querySelector(".faq-answer").style.maxHeight = null;
+      other.querySelector(".faq-question span").textContent = "+";
+    }
+  });
+
+  if (answer.style.maxHeight) {
+    answer.style.maxHeight = null;
+    icon.textContent = "+";
+  } else {
+    answer.style.maxHeight = answer.scrollHeight + "px";
+    icon.textContent = "−";
+  }
+}
+
+/* ================= PAGE TRANSITION ================= */
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.add("page-transition");
+  requestAnimationFrame(() => document.body.classList.add("show"));
+
+  document.querySelectorAll("a").forEach(link => {
+    if (link.href && !link.href.includes("#")) {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        document.body.classList.remove("show");
+        setTimeout(() => window.location.href = link.href, 400);
+      });
+    }
+  });
+});

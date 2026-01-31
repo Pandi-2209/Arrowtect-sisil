@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merchandise</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+    /* ================= HEADER ================= */
+/* ================= HEADER ================= */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;              /* FIXED */
+  background: rgba(0, 0, 0, 0.6);
+backdrop-filter: blur(8px);
+-webkit-backdrop-filter: blur(8px);
+
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 60px;
+  z-index: 1000;
+}
+
+
+/* LOGO */
+.logo {
+  height: 40px;
+
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* MAIN MENU */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;               /* CONTROLS SPACING */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+}
+
+/* LINKS */
+.nav-link {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 4px; 
+  
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+}
+
+/* ================= DROPDOWN ================= */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+/* MENU */
+.dropdown-menu {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  min-width: 220px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  padding: 10px 0;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: all 0.3s ease;
+}
+
+/* OPEN */
+.dropdown.active .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown.active .arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 18px;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background: #f3f6ff;
+  color: #0b5ed7;
+  padding-left: 24px;
+}
+
+
+/* ================= RIGHT ACTIONS ================= */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.sidebar{
+  margin-left:500px;
+}
+
+/* BROCHURE */
+.brochure-btn {
+  padding: 8px 20px;
+  border-radius: 25px;
+  border: 1px solid #fff;
+  font-weight: 600;
+  color: #000;
+  background: #fff;
+  transition: 0.3s;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.brochure-btn:hover {
+  background: rgb(193, 193, 102);
+  transform: translateY(-4px);
+  
+}
+
+/* LOGIN */
+.login-btn {
+ 
+  padding: 14px 34px;
+  background: #0b2d5e;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.4s ease;
+}
+.login-btn:hover{
+   background: #0b5ed7;
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(11,94,215,0.4);
+  
+}
+
+
+
+  
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 10%;
+      min-height: 100vh;
+    }
+
+    .hero-content {
+      max-width: 55%;
+    }
+     .hero-content h1 {
+      font-size: 48px;
+      font-weight: 800;
+      color: #13294b;
+      margin-bottom: 10px;
+    }
+
+    .hero-content .sub-title {
+      font-size: 13px;
+      letter-spacing: 1px;
+      color: #13294b;
+      text-decoration: underline;
+      margin-bottom: 25px;
+      display: inline-block;
+    }
+
+    .hero-content p {
+      font-size: 20px;
+      line-height: 1.6;
+      color: #6b6b6b;
+      margin-bottom: 10px;
+    }
+     .hero-video {
+      width: 380px;
+      height: 380px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #cfd8dc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-video video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-content {
+        max-width: 100%;
+        margin-bottom: 40px;
+      }
+
+      .hero-video {
+        width: 300px;
+        height: 300px;
+      }
+    }
+
+    .about-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 8%;
+      gap: 60px;
+    }
+
+    .about-image {
+      flex: 1;
+    }
+    .about-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      object-fit: cover;
+    }
+
+    .about-content {
+      flex: 1;
+      max-width: 520px;
+    }
+
+    .about-content .label {
+      font-size: 13px;
+      letter-spacing: 2px;
+      color: #888;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+
+    .about-content h2 {
+      font-size: 42px;
+      font-weight: 800;
+      color: #111;
+      margin-bottom: 25px;
+    }
+    .about-content p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #666;
+      margin-bottom: 18px;
+    }
+
+    .about-content p.highlight {
+      color: #1e3a8a;
+      font-weight: 500;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .about-section {
+        flex-direction: column;
+        padding: 60px 6%;
+      }
+
+      .about-content {
+        max-width: 100%;
+      }
+    .about-content h2 {
+        font-size: 34px;
+      }
+    .about-content h2 {
+        font-size: 34px;
+      }
+    }
+    
+
+
+    .values-section {
+      padding: 90px 10%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .intro-text {
+      font-size: 16px;
+      line-height: 1.9;
+      color: #777;
+      margin-bottom: 70px;
+      max-width: 900px;
+    }
+    .values-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    .value-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 25px;
+    }
+
+    .value-card img {
+      width: 90px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .value-content h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 10px;
+    }
+    .value-content p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #777;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .value-card {
+        align-items: center;
+      }
+    }
+
+     .stats-section {
+      width: 1522px;
+      padding: 40px 20px;
+      
+      background-color: #13294b;
+      height:150px;
+      
+    }
+
+    .stats-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 30px;
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 36px;
+      font-weight: 700;
+      color: #fff
+    }
+     .stat-text {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #64748b;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 600px) {
+      .stat-number {
+        font-size: 28px;
+      }
+    }
+     
+     .core-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 20px;
+    }
+
+    .core-title {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 60px;
+    }
+
+    .core-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 50px;
+    }
+
+    .core-item {
+      display: flex;
+      gap: 16px;
+    }
+    .core-icon {
+      width: 48px;
+      height: 48px;
+      background: #f1f5f9;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .core-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: #0f172a;
+    }
+
+    .core-content span {
+      font-size: 14px;
+      color: #6b7280;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .core-content h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .core-content p {
+      font-size: 14px;
+      color: #6b7280;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 600px) {
+      .core-title {
+        font-size: 28px;
+      }
+    }
+     .why-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 90px 20px;
+      background: radial-gradient(circle at left, #f1f5f9 1px, transparent 1px),
+                  radial-gradient(circle at right, #f1f5f9 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .why-title {
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 60px;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .why-column {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    .why-card {
+      background: #ffffff;
+      padding: 28px 30px;
+      border-radius: 6px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+
+    .why-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #0b1f44;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .why-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: #ffffff;
+    }
+     .why-content h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .why-content p {
+      font-size: 14px;
+      color: #6b7280;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 900px) {
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .why-title {
+        font-size: 32px;
+      }
+    }
+     .cert-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 90px 20px 120px;
+    }
+
+    .cert-title {
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .cert-desc {
+      max-width: 900px;
+      font-size: 15px;
+      line-height: 1.8;
+      color: #6b7280;
+    }
+    .cert-divider {
+      margin: 40px 0 70px;
+      border: none;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .cert-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 70px 90px;
+      align-items: center;
+    }
+
+    .cert-logos img {
+      max-height: 55px;
+      max-width: 140px;
+      object-fit: contain;
+      filter: grayscale(100%);
+      opacity: 0.9;
+      transition: 0.3s ease;
+      
+    }
+     .cert-logos img:hover {
+      filter: grayscale(0%);
+      opacity: 1;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .cert-title {
+        font-size: 32px;
+      }
+
+      .cert-logos {
+        gap: 40px 50px;
+      }
+    }
+    .products-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 90px 20px 120px;
+    }
+
+    .products-title {
+      text-align: center;
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 60px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+    }
+    .products-grid ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    .products-grid li {
+      font-size: 15px;
+      color: #6b7280;
+      line-height: 1.9;
+    }
+
+    @media (max-width: 992px) {
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .products-title {
+        font-size: 32px;
+      }
+
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .filter-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.filter-tabs button {
+  border: none;
+  background: none;
+  font-size: 15px;
+  color: #6b7280;
+  cursor: pointer;
+  padding-bottom: 6px;
+}
+
+.filter-tabs button.active {
+  color: #111827;
+  border-bottom: 2px solid #111827;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.image-grid img {
+  width: 100%;
+  display: block;
+}
+
+</style>
+<body>
+   <header class="header">
+
+  <!-- LOGO -->
+  <img src="./images/sisil.png" class="logo" alt="SISIL TEJAS">
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <ul class="nav-menu">
+
+      <li><a href="./index.html" class="nav-link">Home</a></li>
+      <li><a href="./about.html" class="nav-link">About</a></li>
+
+      <!-- SERVICES DROPDOWN -->
+      <li class="dropdown" id="servicesDropdown">
+        <button type="button" class="nav-link dropdown-toggle">
+          Services <span class="arrow">▾</span>
+        </button>
+
+        <ul class="dropdown-menu">
+          <li><a href="sd.html">Skill Development</a></li>
+          <li><a href="hr.html">HR Management</a></li>
+          <li><a href="consult.html">Corporate Consulting</a></li>
+          <li><a href="textile.html">Textile ERP</a></li>
+        </ul>
+      </li>
+
+      <li><a href="./merchandise.html" class="nav-link">Merchandise</a></li>
+      <li><a href="./contact.html" class="nav-link">Contact</a></li>
+
+    </ul>
+  </nav>
+
+  <!-- RIGHT BUTTONS -->
+  <div class="header-actions">
+    <a href="./assets/sisil-merchandise-brochure-2025.pdf" download class="brochure-btn">
+      Brochure
+    </a>
+    <a href="login.html" id="loginBtn" class="login-btn">Login</a>
+  </div>
+
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+      <h1>SISIL MERCHANDISE</h1>
+      <span class="sub-title">DIVISION OF SISIL TEJAS INDIA PVT LTD</span>
+
+      <p>Your Trusted Partner for Global Apparel Sourcing,</p>
+      <p>Built for Buyers Who Value Clarity, Compliance, and Craft.</p>
+      <p>Trusted from Tirupur to the World.</p>
+    </div>
+
+    <!-- VIDEO REPLACEMENT -->
+    <div class="hero-video">
+      <video autoplay muted loop playsinline>
+        <source src="./assets/ftvideo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+  <section class="about-section">
+    <!-- IMAGE -->
+    <div class="about-image">
+      <img src="./images/team.jpg" alt="SISIL Merchandise Team Meeting">
+    </div>
+
+    <!-- CONTENT -->
+    <div class="about-content">
+      <span class="label">WHO WE ARE</span>
+      <h2>SISIL Merchandise</h2>
+
+      <p>
+        SISIL Merchandise is the dedicated apparel sourcing division of SISIL Tejas
+        India Private Limited, strategically based in South India’s textile hub –
+        Tirupur, Tamil Nadu.
+      </p>
+
+      <p>
+        We connect global fashion brands with ethical, high-quality manufacturers
+        across Tirupur, Coimbatore, Erode, Karur, and other key textile regions of
+        Tamil Nadu.
+      </p>
+
+      <p class="highlight">
+        With deep local roots and a global perspective, SISIL Merchandise is a
+        trusted sourcing partner for international buyers seeking reliability,
+        transparency, and innovation.
+      </p>
+    </div>
+  </section>
+ <section class="values-section">
+
+    <!-- TOP PARAGRAPH -->
+    <p class="intro-text">
+      Our team brings decades of hands-on expertise across the entire supply chain—spanning
+      manufacturing, sourcing, quality assurance, and logistics. Through long-standing
+      partnerships with India’s leading garment manufacturers, we offer a comprehensive
+      product range backed by consistent quality, compliance, and timely delivery.
+      From concept to shipment, we accompany our clients through every stage of
+      development—creating, implementing, and investing in solutions that make fashion
+      more climate-conscious and commercially agile. With deep local roots and a global
+      perspective, SISIL Merchandise is a trusted sourcing partner for international buyers
+      seeking reliability, transparency, and innovation.
+    </p>
+
+    <!-- MISSION & VISION -->
+    <div class="values-grid">
+
+      <!-- MISSION -->
+      <div class="value-card">
+        <img src="./images/mission.jpg" alt="Our Mission">
+        <div class="value-content">
+          <h3>Our Mission</h3>
+          <p>
+            To deliver reliable, transparent, and sustainable apparel sourcing
+            solutions that empower global fashion brands with confidence and clarity.
+          </p>
+        </div>
+      </div>
+
+      <!-- VISION -->
+      <div class="value-card">
+        <img src="./images/vision.jpg" alt="Our Vision">
+        <div class="value-content">
+          <h3>Our Vision</h3>
+          <p>
+            To be India’s most trusted sourcing partner for sustainable and scalable
+            fashion—driving innovation while respecting people, process, and planet.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+ <section class="stats-section">
+    <div class="stats-container">
+
+      <div>
+        <div class="stat-number">10+</div>
+        <div class="stat-text">Composite Factories<br>Connected</div>
+      </div>
+
+      <div>
+        <div class="stat-number">15+</div>
+        <div class="stat-text">Years of Expertise</div>
+      </div>
+
+      <div>
+        <div class="stat-number">100+</div>
+        <div class="stat-text">Certified Factories</div>
+      </div>
+
+      <div>
+        <div class="stat-number">300+</div>
+        <div class="stat-text">Industries Facilitated<br>in Skilling</div>
+      </div>
+
+      <div>
+        <div class="stat-number">50K+</div>
+        <div class="stat-text">Skilled Workforce<br>Trained & Employed</div>
+      </div>
+
+      <div>
+        <div class="stat-number">1M</div>
+        <div class="stat-text">Apparel Production<br>Capacity</div>
+      </div>
+
+    </div>
+  </section>
+ 
+  <section class="core-section">
+  <h2 class="core-title">Our Core Functions</h2>
+
+  <div class="core-grid">
+
+    <div class="core-item">
+      <div class="core-icon">
+        <!-- Vendor Icon -->
+        <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M3 7h18M3 12h18M3 17h18"/>
+        </svg>
+      </div>
+      <div class="core-content">
+        <span>01</span>
+        <h3>Vendor Management</h3>
+        <p>
+          Identify and onboard manufacturers based on buyer needs.
+          Negotiate pricing, timelines, and ensure compliance standards.
+        </p>
+      </div>
+    </div>
+
+    <div class="core-item">
+      <div class="core-icon">
+        <!-- Product Icon -->
+        <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M12 6v12m6-6H6"/>
+        </svg>
+      </div>
+      <div class="core-content">
+        <span>02</span>
+        <h3>Product Development</h3>
+        <p>
+          Coordinate sampling, tech pack interpretation, and fabric sourcing.
+          Suggest trims, washes, and finishes to optimize cost and quality.
+        </p>
+      </div>
+    </div>
+      <div class="core-item">
+      <div class="core-icon">
+        <!-- Quality Icon -->
+        <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M5 13l4 4L19 7"/>
+        </svg>
+      </div>
+      <div class="core-content">
+        <span>03</span>
+        <h3>Production & Quality Assurance</h3>
+        <p>
+          Conduct inline and final inspections.
+          Ensure adherence to buyer specifications and global standards.
+        </p>
+      </div>
+    </div>
+     <div class="core-item">
+      <div class="core-icon">
+        <!-- Logistics Icon -->
+        <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M3 9h18v6H3z"/>
+        </svg>
+      </div>
+      <div class="core-content">
+        <span>04</span>
+        <h3>Logistics & Documentation</h3>
+        <p>
+          Manage shipping schedules, export documentation, and payments.
+          Handle L/Cs, invoices, and customs coordination efficiently.
+        </p>
+      </div>
+    </div>
+     <div class="core-item">
+      <div class="core-icon">
+        <!-- Communication Icon -->
+        <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M8 10h8m-8 4h5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+      </div>
+      <div class="core-content">
+        <span>05</span>
+        <h3>Client Communication</h3>
+        <p>
+          Act as a local representative for overseas brands.
+          Provide regular updates, resolve issues, and ensure transparency.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="why-section">
+  <h2 class="why-title">Why Choose Us?</h2>
+
+  <div class="why-grid">
+
+    <!-- LEFT COLUMN -->
+    <div class="why-column">
+
+      <div class="why-card">
+        <div class="why-icon">
+          <!-- Sustainability Icon -->
+          <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 3v18m9-9H3"/>
+          </svg>
+        </div>
+        <div class="why-content">
+          <h3>Sustainable & Ethical Sourcing</h3>
+          <p>
+            We prioritize suppliers who invest in sustainable & certified
+            materials, and ethical labor practices.
+          </p>
+        </div>
+      </div>
+
+      <div class="why-card">
+        <div class="why-icon">
+          <!-- Technology Icon -->
+          <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M9 17v-2a4 4 0 014-4h4"/>
+          </svg>
+        </div>
+        <div class="why-content">
+          <h3>Technology-Driven Operations</h3>
+          <p>
+            Technology-driven tools to monitor, analyze, optimize production,
+            ensure real-time tracking and collaboration for operational
+            performance.
+          </p>
+        </div>
+      </div>
+      </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="why-column">
+
+      <div class="why-card">
+        <div class="why-icon">
+          <!-- Execution Icon -->
+          <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 6v12m6-6H6"/>
+          </svg>
+        </div>
+        <div class="why-content">
+          <h3>End-to-End Execution</h3>
+          <p>
+            From sampling to shipment, we manage every step with precision and
+            transparency. Reliable, transparent, and sustainable apparel
+            sourcing solutions.
+          </p>
+        </div>
+      </div>
+       <div class="why-card">
+        <div class="why-icon">
+          <!-- Global Icon -->
+          <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <div class="why-content">
+          <h3>Local Expertise, Global Vision</h3>
+          <p>
+            Based in Tirupur, we understand the pulse of India’s textile
+            ecosystem while serving global fashion needs.
+          </p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <!-- Network Icon -->
+          <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </div>
+        <div class="why-content">
+          <h3>Vetted Supplier Network</h3>
+          <p>
+            We work with over 100+ textile manufacturers across Tamil Nadu,
+            mostly certified, offering scalable production and compliance.
+          </p>
+        </div>
+      </div>
+
+    </div>
+    </div>
+</section>
+
+
+<section class="cert-section">
+
+  <h2 class="cert-title">Our Certificates</h2>
+
+  <p class="cert-desc">
+    Our manufactures are certified with SEDEX, ICS, SA8000, BSCI, DISNEY, FAMA,
+    CTPAT, and GOTS. We have the capacity to supply OEKO-TEX-certified,
+    eco-friendly, organic-certified, sustainable, and recycled textiles GRS
+    certified, to our customers as well.
+  </p>
+
+  <hr class="cert-divider">
+
+  <div class="cert-logos">
+    <!-- Replace src paths with your actual image paths -->
+    <img src="images/disney.jpg" alt="Disney">
+    <img src="images/GOTS.webp" alt="GOTS">
+    <img src="images/wrap.png" alt="WRAP">
+    <img src="images/bci.jpg" alt="BCI">
+    <img src="images/sedex.webp" alt="SEDEX">
+    <img src="images/c-tapt.jpg" alt="CTPAT">
+  </div>
+</section>
+ 
+<section class="products-section">
+  <h2 class="products-title">Our Products</h2>
+
+  <div class="products-grid">
+
+    <ul>
+      <li>T-shirts</li>
+      <li>Polo shirts</li>
+      <li>Tank tops</li>
+      <li>Long-sleeve tops</li>
+      <li>Hoodies</li>
+      <li>Sweatshirts</li>
+      <li>Sweaters</li>
+      <li>Singlets</li>
+      <li>Blouses</li>
+      <li>Activewear</li>
+      <li>Sportswear</li>
+      <li>Athleisure</li>
+    </ul>
+
+     <ul>
+      <li>Loungewear</li>
+      <li>Joggers</li>
+      <li>Trackpants</li>
+      <li>Trousers</li>
+      <li>Jeans</li>
+      <li>Pants</li>
+      <li>Shorts</li>
+      <li>Dresses</li>
+      <li>Jumpsuits</li>
+      <li>Rompers</li>
+      <li>Overalls</li>
+      <li>Bodysuits</li>
+    </ul>
+
+     <ul>
+      <li>Pajamas</li>
+      <li>Sleepwear</li>
+      <li>Lingerie</li>
+      <li>Bra</li>
+      <li>Shapewear</li>
+      <li>Thermal Wears</li>
+      <li>A-Shirts</li>
+      <li>Boxer Briefs</li>
+      <li>Outerwear</li>
+      <li>Jackets</li>
+      <li>Coats</li>
+      <li>Socks (No-show, Ankle, Crew, etc.)</li>
+    </ul>
+
+     <ul>
+      <li>Caps</li>
+      <li>Mittens</li>
+      <li>Bedding (Sheets, Pillowcases, Comforters, etc.)</li>
+      <li>Window Treatments (Curtains, Draperies)</li>
+      <li>Kitchen & Dining (Tablecloths, Napkins, Towels)</li>
+      <li>Bathroom Essentials (Towels, Bathmats, Shower Curtains)</li>
+      <li>Decorative Textiles (Cushions, Wall Hangings)</li>
+    </ul>
+
+  </div>
+</section>
+
+ <div class="filter-tabs">
+  <button class="active" data-filter="all">All</button>
+  <button data-filter="men">Men Wear</button>
+  <button data-filter="women">Women Wear</button>
+  <button data-filter="kids">Kids Wear</button>
+  <button data-filter="home">Home Textile</button>
+  <button data-filter="socks">Socks</button>
+</div>
+<div class="image-grid">
+
+  <div class="item" data-category="men">
+    <img src="images/men.jpg">
+  </div>
+
+  <div class="item" data-category="women">
+    <img src="images/women.jpg">
+  </div>
+
+  <div class="item" data-category="kids">
+    <img src="images/kids.avif">
+  </div>
+
+  <div class="item" data-category="home">
+    <img src="images/home.jpg">
+  </div>
+
+  <div class="item" data-category="socks">
+    <img src="images/socks.jpg">
+  </div>
+
+</div>
+   
+</body>
+<script>
+    /* Sticky Header + Active Nav */
+  const header = document.querySelector(".header");
+  const sections = document.querySelectorAll("section");
+
+
+  window.addEventListener("scroll", () => {
+    header.classList.toggle("sticky", window.scrollY > 80);
+    setActiveLink();
+    revealOnScroll();
+  });
+
+  
+const dropdown = document.getElementById("servicesDropdown");
+const toggle = dropdown.querySelector(".dropdown-toggle");
+
+toggle.addEventListener("click", (e) => {
+  e.stopPropagation();
+  dropdown.classList.toggle("active");
+});
+
+document.addEventListener("click", () => {
+  dropdown.classList.remove("active");
+});
+// Brochure download
+function downloadBrochure() {
+  const link = document.createElement("a");
+  link.href = "assets/sisil-merchandise-brochure-2025.pdf"; // your PDF file
+  link.download = "sisil-merchandise-brochure-2025.pdf";
+  link.click();
+}
+
+
+
+
+/* Hover open */
+dropdown.addEventListener("mouseenter", () => {
+  clearTimeout(closeTimer);
+  dropdown.classList.add("active");
+});
+
+/* Hover close with delay */
+dropdown.addEventListener("mouseleave", () => {
+  closeTimer = setTimeout(() => {
+    dropdown.classList.remove("active");
+  }, 250); // smooth close
+});
+
+/* Click support (desktop + mobile) */
+dropdown
+  .querySelector(".dropdown-toggle")
+  .addEventListener("click", (e) => {
+    e.stopPropagation();
+    dropdown.classList.toggle("active");
+  });
+
+/* Close when clicking outside */
+document.addEventListener("click", () => {
+  dropdown.classList.remove("active");
+});
+
+
+  /* Smooth Scroll */
+  navLinks.forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      document.querySelector(link.getAttribute("href"))
+        .scrollIntoView({ behavior: "smooth" });
+    });
+  });
+
+  /* Discover Button */
+  const discoverBtn = document.getElementById("discoverBtn");
+  if (discoverBtn) {
+    discoverBtn.addEventListener("click", () => {
+      document.querySelector("#about")
+        .scrollIntoView({ behavior: "smooth" });
+    });
+  }
+
+  /* Scroll Reveal */
+  const reveals = document.querySelectorAll(".reveal");
+
+  function revealOnScroll() {
+    reveals.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      if (top < window.innerHeight - 100) {
+        el.classList.add("active");
+      }
+    });
+  }
+
+  revealOnScroll();
+
+
+
+/* ================= LOGIN / PROFILE ================= */
+const user = JSON.parse(localStorage.getItem("user"));
+
+const loginBtn = document.getElementById("loginBtn");
+const profileBox = document.getElementById("profileBox");
+
+if (user) {
+  loginBtn.style.display = "none";
+  profileBox.style.display = "flex";
+  const loginBtn = document.getElementById("loginBtn");
+const user = JSON.parse(localStorage.getItem("loggedUser"));
+
+if (user && loginBtn) {
+  loginBtn.innerText = "Profile";
+  loginBtn.href = "profile.html";
+}
+
+  document.getElementById("profileName").innerText = user.name;
+  document.getElementById("profileImg").src =
+    user.picture || `https://ui-avatars.com/api/?name=${user.name}`;
+}
+
+function logout() {
+  localStorage.removeItem("user");
+  window.location.href = "login.html";
+}
+function toggleBot() {
+  const bot = document.getElementById("chatbot");
+  bot.style.display = bot.style.display === "flex" ? "none" : "flex";
+}
+
+function sendMessage() {
+  const input = document.getElementById("userInput");
+  const msg = input.value.trim();
+  if (!msg) return;
+
+  const chatBody = document.getElementById("chatBody");
+
+  chatBody.innerHTML += <div class="user-msg">${msg}</div>;
+  input.value = "";
+
+  setTimeout(() => {
+    chatBody.innerHTML += <div class="bot-msg">${getBotReply(msg)}</div>;
+    chatBody.scrollTop = chatBody.scrollHeight;
+  }, 600);
+} 
+
+
+/* ================= PAGE TRANSITION JS ================= */
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.add("page-transition");
+
+  requestAnimationFrame(() => {
+    document.body.classList.add("show");
+  });
+
+  document.querySelectorAll("a").forEach(link => {
+    if (link.href && !link.href.includes("#")) {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        document.body.classList.remove("show");
+
+        setTimeout(() => {
+          window.location.href = link.href;
+        }, 400);
+      });
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const buttons = document.querySelectorAll(".filter-tabs button");
+  const items = document.querySelectorAll(".image-grid .item");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", function () {
+
+      // Remove active from all buttons
+      buttons.forEach(btn => btn.classList.remove("active"));
+      this.classList.add("active");
+
+      const filter = this.dataset.filter;
+
+      items.forEach(item => {
+        const categories = item.dataset.category.split(" ");
+
+        if (filter === "all" || categories.includes(filter)) {
+          item.style.display = "block";
+        } else {
+          item.style.display = "none";
+        }
+      });
+
+    });
+  });
+
+});
+
+  </script>
+  </html>

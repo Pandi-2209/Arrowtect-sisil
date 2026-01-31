@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Identity -->
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<style>
+    * {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: #f5f7fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  width: 900px;
+  height: 500px;
+  display: flex;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+  overflow: hidden;
+}
+
+/* LEFT */
+.login-box {
+  width: 50%;
+  padding: 50px;
+}
+
+.login-box h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.sub {
+  color: #777;
+  margin-bottom: 25px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.divider {
+  text-align: center;
+  margin: 20px 0;
+  color: #aaa;
+}
+
+.register {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.register span {
+  color: #2563eb;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* RIGHT BACKGROUND (IMAGE STYLE) */
+.login-bg {
+  width: 50%;
+  background:
+    radial-gradient(circle at 30% 30%, #ff005d, transparent 40%),
+    radial-gradient(circle at 70% 40%, #ff8c00, transparent 40%),
+    radial-gradient(circle at 50% 70%, #7f00ff, transparent 40%),
+    radial-gradient(circle at 80% 80%, #00c6ff, transparent 40%);
+  filter: blur(60px);
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+  .login-bg {
+    display: none;
+  }
+  .login-box {
+    width: 100%;
+  }
+}
+
+</style>
+<body>
+
+<div class="login-container">
+
+  <!-- LEFT LOGIN FORM -->
+  <div class="login-box">
+    <h1>Hey,<br>Welcome Back!</h1>
+    <p class="sub">We are very happy to see you back!</p>
+
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+
+    <button class="login-btn" onclick="login()">Login</button>
+
+    <div class="divider">OR</div>
+
+    <!-- GOOGLE LOGIN -->
+    <div id="g_id_onload"
+         data-client_id="YOUR_GOOGLE_CLIENT_ID"
+         data-callback="handleGoogleLogin">
+    </div>
+
+    <div class="g_id_signin"
+         data-type="standard"
+         data-shape="rectangular"
+         data-theme="outline"
+         data-text="signin_with"
+         data-size="large"
+         data-width="280">
+    </div>
+
+    <p class="register">
+      Don’t have an account?
+      <span onclick="goRegister()">Sign up here</span>
+    </p>
+  </div>
+
+  <!-- RIGHT BACKGROUND -->
+  <div class="login-bg"></div>
+
+</div>
+
+<script>
+    // Normal Login (Demo)
+function login() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  if (!email || !password) {
+    alert("Please fill all fields");
+    return;
+  }
+
+  // Demo login
+  localStorage.setItem("loggedUser", JSON.stringify({
+    name: email.split("@")[0],
+    email: email
+  }));
+
+  window.location.href = "profile.html";
+}
+
+// Google Login Handler
+function handleGoogleLogin(response) {
+  const data = parseJwt(response.credential);
+
+  localStorage.setItem("loggedUser", JSON.stringify({
+    name: data.name,
+    email: data.email,
+    photo: data.picture
+  }));
+
+  window.location.href = "profile.html";
+}
+
+// Decode JWT
+function parseJwt(token) {
+  const base64 = token.split('.')[1]
+    .replace(/-/g, '+')
+    .replace(/_/g, '/');
+  return JSON.parse(atob(base64));
+}
+
+// Register redirect
+function goRegister() {
+  alert("Redirect to Register Page");
+}
+
+</script>
+</body>
+</html>

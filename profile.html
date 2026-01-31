@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+   * {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f6fb;
+}
+
+/* HEADER */
+.profile-header {
+  height: 70px;
+  background: #0b5ed7;
+  color: #fff;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.user-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-area img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+}
+
+.logout-btn {
+  background: #dc3545;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* MAIN */
+.profile-main {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.profile-card {
+  background: white;
+  width: 350px;
+  padding: 30px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.profile-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.profile-card h2 {
+  margin: 10px 0 5px;
+  color: #0b5ed7;
+}
+
+.profile-card p {
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.role {
+  background: #e7f1ff;
+  color: #0b5ed7;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+.back-btn {
+  background: transparent;
+  border: none;
+  color: #0b5ed7;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+}
+
+
+
+</style>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Profile</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<header class="profile-header">
+  <div class="logo">SISIL</div>
+
+  <div class="user-area">
+    <img id="topPhoto" src="./images/Pandi.jpeg">
+    <span id="topName">Sisil User</span>
+    <button onclick="logout()" class="logout-btn">Logout</button>
+  </div>
+</header>
+ 
+
+<!-- PROFILE CARD -->
+<main class="profile-main">
+  <div class="profile-card">
+  <img id="profileImg" src="./images/Pandi.jpeg">
+  <h2 id="profileName"></h2>
+  <p id="profileEmail"></p>
+
+  <div class="btn-group">
+    <button onclick="editProfile()">Edit Profile</button>
+    <button class="logout" onclick="logout()">Logout</button><br>
+    <button class="back-btn" onclick="goHome()">← Back to Home</button>
+
+  </div>
+</div>
+
+</main>
+
+
+</body>
+</html>
+
+<script>
+
+
+const user = JSON.parse(localStorage.getItem("loggedUser"));
+
+if (!user) {
+  window.location.href = "login.html";
+}
+
+document.getElementById("name").innerText = user.name;
+document.getElementById("email").innerText = user.email;
+
+if (user.photo) {
+  document.getElementById("photo").src = user.photo;
+}
+
+function logout() {
+  localStorage.removeItem("loggedUser");
+  window.location.href = "login.html";
+}
+function goHome() {
+  if (document.referrer.includes("index.html")) {
+    window.history.back();
+  } else {
+    window.location.href = "index.html";
+  }
+}
+
+
+</script>
+</body>
+</html>

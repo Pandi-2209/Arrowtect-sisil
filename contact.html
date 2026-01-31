@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    
+</head>
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+    /* ================= HEADER ================= */
+/* ================= HEADER ================= */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;              /* FIXED */
+  background: rgba(0, 0, 0, 0.6);
+backdrop-filter: blur(8px);
+-webkit-backdrop-filter: blur(8px);
+
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 60px;
+  z-index: 1000;
+}
+
+
+/* LOGO */
+.logo {
+  height: 40px;
+
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* MAIN MENU */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;               /* CONTROLS SPACING */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+}
+
+/* LINKS */
+.nav-link {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 4px; 
+  
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+}
+
+/* ================= DROPDOWN ================= */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+/* MENU */
+.dropdown-menu {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  min-width: 220px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  padding: 10px 0;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: all 0.3s ease;
+}
+
+/* OPEN */
+.dropdown.active .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown.active .arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 18px;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background: #f3f6ff;
+  color: #0b5ed7;
+  padding-left: 24px;
+}
+
+
+/* ================= RIGHT ACTIONS ================= */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.sidebar{
+  margin-left:500px;
+}
+
+/* BROCHURE */
+.brochure-btn {
+  padding: 8px 20px;
+  border-radius: 25px;
+  border: 1px solid #fff;
+  font-weight: 600;
+  color: #000;
+  background: #fff;
+  transition: 0.3s;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.brochure-btn:hover {
+  background: rgb(193, 193, 102);
+  transform: translateY(-4px);
+  
+}
+
+/* LOGIN */
+.login-btn {
+ 
+  padding: 14px 34px;
+  background: #0b2d5e;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.4s ease;
+}
+.login-btn:hover{
+   background: #0b5ed7;
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(11,94,215,0.4);
+  
+}
+
+
+
+
+    /* ================= HERO ================= */
+    .contact-hero {
+      height: 300px;
+      background: url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d") center/cover no-repeat;
+      position: relative;
+      color: #fff;
+    }
+
+    .contact-hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.65);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 80px;
+    }
+
+    .hero-content h1 {
+      font-size: 46px;
+      margin-bottom: 8px;
+    }
+
+    .hero-content p {
+      font-size: 14px;
+      opacity: 0.85;
+    }
+    /* ================= CONTACT SECTION ================= */
+    .contact-section {
+      padding: 100px 80px;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 80px;
+    }
+
+    .contact-form h6 {
+      letter-spacing: 2px;
+      font-size: 12px;
+      color: #1e3c64;
+      margin-bottom: 10px;
+    }
+
+    .contact-form h2 {
+      font-size: 40px;
+      margin-bottom: 40px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 16px;
+      border: none;
+      background: #f4f6f8;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .contact-form textarea {
+      height: 160px;
+      resize: none;
+      margin-bottom: 25px;
+    }
+
+    .form-buttons {
+      display: flex;
+      gap: 15px;
+    }
+    form-buttons button {
+      padding: 14px 28px;
+      border: none;
+      font-weight: 700;
+      border-radius: 4px;
+      cursor: pointer;
+      color: #fff;
+      background: #1e3c64;
+      transition: 0.3s;
+    }
+
+    .form-buttons button:last-child {
+      background: #132f52;
+    }
+
+    .form-buttons button:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+    /* ================= CONTACT INFO ================= */
+    .contact-info h6 {
+      letter-spacing: 2px;
+      font-size: 12px;
+      color: #1e3c64;
+      margin-bottom: 10px;
+    }
+
+    .contact-info h2 {
+      font-size: 38px;
+      margin-bottom: 25px;
+    }
+
+    .contact-info p {
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+    .info-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #111;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+
+    .info-text h4 {
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+
+    .info-text span {
+      font-size: 14px;
+      color: #555;
+    }
+    /* ================= MAP ================= */
+    .map {
+      width: 100%;
+      height: 420px;
+      margin-top: 80px;
+      border: none;
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 900px) {
+      .hero-content {
+        padding-left: 30px;
+      }
+
+      .contact-section {
+        grid-template-columns: 1fr;
+        padding: 70px 30px;
+      }
+       .form-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    /* Bottom Info Bar */
+.info-bar {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: space-around;
+  padding: 25px 10%;
+  color: #ddd;
+  z-index: 3;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.info-item span {
+  font-size: 22px;
+  color: #3b82f6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .cta-box {
+    padding: 40px 25px;
+  }
+
+  .cta-box h1 {
+    font-size: 28px;
+  }
+
+  .info-bar {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .info-item {
+    justify-content: center;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.footer {
+  background: linear-gradient(135deg, #0b0b0b, #151515);
+  color: #bbb;
+  padding-top: 80px;
+}
+
+/* MAIN GRID */
+.footer-container {
+  max-width: 1400px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  padding: 0 60px 60px;
+}
+
+.footer-col h3 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* LOGO */
+.logo img {
+  margin-top: 30px;
+  width: 150px;
+}
+
+/* SERVICES */
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-col ul li a:hover {
+  color: #3b82f6;
+}
+
+/* PROJECT GRID */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.project-grid img {
+  width: 150px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+  height:100px;
+}
+
+.project-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* NEWSLETTER */
+.newsletter {
+  display: flex;
+  margin-top: 20px;
+}
+
+.newsletter input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.newsletter button {
+  background: #1e3c64;
+  border: none;
+  color: #fff;
+  padding: 0 18px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* BOTTOM BAR */
+.footer-bottom {
+  border-top: 1px solid #222;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #888;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    padding: 0 30px 50px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+</style>
+<body>
+   
+<header class="header">
+
+  <!-- LOGO -->
+  <img src="./images/sisil.png" class="logo" alt="SISIL TEJAS">
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <ul class="nav-menu">
+
+      <li><a href="./index.html" class="nav-link">Home</a></li>
+      <li><a href="./about.html" class="nav-link">About</a></li>
+
+      <!-- SERVICES DROPDOWN -->
+      <li class="dropdown" id="servicesDropdown">
+        <button type="button" class="nav-link dropdown-toggle">
+          Services <span class="arrow">▾</span>
+        </button>
+
+        <ul class="dropdown-menu">
+          <li><a href="sd.html">Skill Development</a></li>
+          <li><a href="hr.html">HR Management</a></li>
+          <li><a href="consult.html">Corporate Consulting</a></li>
+          <li><a href="textile.html">Textile ERP</a></li>
+        </ul>
+      </li>
+
+      <li><a href="./merchandise.html" class="nav-link">Merchandise</a></li>
+      <li><a href="./contact.html" class="nav-link">Contact</a></li>
+
+    </ul>
+  </nav>
+
+  <!-- RIGHT BUTTONS -->
+  <div class="header-actions">
+    <a href="./assets/sisil-merchandise-brochure-2025.pdf" download class="brochure-btn">
+      Brochure
+    </a>
+    <a href="login.html" id="loginBtn" class="login-btn">Login</a>
+  </div>
+
+</header>
+
+ <!-- ================= HERO ================= -->
+<section class="contact-hero">
+  <div class="hero-content">
+    <h1>Contact Us</h1>
+    <p>Home &nbsp;›&nbsp; Contact</p>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact-section">
+
+  <!-- LEFT FORM -->
+  <div class="contact-form">
+    <h6>GET IN TOUCH</h6>
+    <h2>We'd love to hear from you</h2>
+
+    <div class="form-grid">
+      <input type="text" placeholder="Enter Name">
+      <input type="email" placeholder="Enter Email">
+      <input type="text" placeholder="Subject">
+      <input type="text" placeholder="Phone Number">
+    </div>
+
+    <textarea placeholder="Your Message"></textarea>
+
+    <div class="form-buttons">
+      <button>SEND MESSAGE</button>
+      <button type="reset">RESET</button>
+    </div>
+  </div>
+
+  <!-- RIGHT INFO -->
+  <div class="contact-info">
+    <h6>NEED ASSISTANCE?</h6>
+    <h2>Contact Information</h2>
+
+    <p>
+      We are always here to support businesses, industries, and individuals
+      across Skill Development, HR Management, and Garment Manufacturing sectors.
+    </p>
+
+    <div class="info-item">
+      <div class="info-icon">📞</div>
+      <div class="info-text">
+        <h4>Call Us</h4>
+        <span>+91 96000 82116</span>
+      </div>
+    </div>
+
+    <div class="info-item">
+      <div class="info-icon">✉️</div>
+      <div class="info-text">
+        <h4>Email Us</h4>
+        <span>info@sisil.in</span>
+      </div>
+    </div>
+
+    <div class="info-item">
+      <div class="info-icon">📍</div>
+      <div class="info-text">
+        <h4>Visit Us</h4>
+        <span>Tirupur, Tamil Nadu, India</span>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ================= MAP ================= -->
+<iframe
+  class="map"
+  src="https://www.google.com/maps?q=SISIL%20Tejas%20India%20Private%20Limited&output=embed"
+  loading="lazy">
+</iframe>
+
+<!-- Bottom Info Bar -->
+
+  <div class="info-bar">
+    <div class="info-item">
+      <span>📍</span>
+      <p> Tirupur, Tamil Nadu,<br>India</p>
+    </div>
+
+    <div class="info-item">
+      <span>✉️</span>
+      <p>info@sisil.in<br>+91 96000 82116</p>
+    </div>
+
+    <div class="info-item">
+      <span>⏰</span>
+      <p>Mon – Sat: 8:00 am to 6:00 pm<br>Sunday: CLOSED</p>
+    </div>
+  </div>
+
+
+
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- ABOUT -->
+    <div class="footer-col">
+      <h3>About SISIL</h3>
+      <p>
+        SISIL Tejas India Private Limited is a leading provider of Skill
+        Development, HR Management, and Garment Manufacturing services,
+        committed to excellence and innovation.
+      </p>
+
+      <div class="logo">
+        <img src="images/sisil.png" alt="SISIL">
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="footer-col">
+      <h3>Our Services</h3>
+      <ul>
+        <li><a href="sd.html">Skill Development</a></li>
+        <li><a href="hr.html">HR Management</a></li>
+        <li><a href="consult.html">Corporate Consulting</a></li>
+        <li><a href="merchandise.html">Merchandise</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="footer-col">
+      <h3>Our Projects</h3>
+      <div class="project-grid">
+        <img src="images/p1.png">
+        <img src="images/p2.png">
+        <img src="images/p3.jpg">
+        <img src="images/p4.jpg">
+        <img src="images/p5.jpeg">
+        <img src="images/p6.jpg">
+      </div>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div class="footer-col">
+      <h3>Newsletter</h3>
+      <p>
+        Subscribe to our newsletter for latest updates on Skill Development,
+        HR Management, and Garment Manufacturing
+      </p>
+
+      <form class="newsletter">
+        <input type="email" placeholder="Email Address">
+        <button type="submit">➤</button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM BAR -->
+  <div class="footer-bottom">
+    <p>© Copyright 2024 by SISIL Tejas India Private Limited</p>
+    <p>Maintained By Navalan Technologies</p>
+  </div>
+
+</footer>
+
+
+    
+</body>
+<script>
+     /* Sticky Header + Active Nav */
+  const header = document.querySelector(".header");
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  window.addEventListener("scroll", () => {
+    header.classList.toggle("sticky", window.scrollY > 80);
+    setActiveLink();
+    revealOnScroll();
+  });
+
+  function setActiveLink() {
+    let current = "";
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 150;
+      if (window.scrollY >= sectionTop) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach(link => {
+  link.addEventListener("click", e => {
+    e.preventDefault();
+    document.querySelector(link.getAttribute("href"))
+      .scrollIntoView({ behavior: "smooth" });
+  });
+});
+
+  }
+  
+const dropdown = document.getElementById("servicesDropdown");
+const toggle = dropdown.querySelector(".dropdown-toggle");
+
+toggle.addEventListener("click", (e) => {
+  e.stopPropagation();
+  dropdown.classList.toggle("active");
+});
+
+document.addEventListener("click", () => {
+  dropdown.classList.remove("active");
+});
+// Brochure download
+function downloadBrochure() {
+  const link = document.createElement("a");
+  link.href = "assets/sisil-merchandise-brochure-2025.pdf"; // your PDF file
+  link.download = "sisil-merchandise-brochure-2025.pdf";
+  link.click();
+}
+
+
+
+
+/* Hover open */
+dropdown.addEventListener("mouseenter", () => {
+  clearTimeout(closeTimer);
+  dropdown.classList.add("active");
+});
+
+/* Hover close with delay */
+dropdown.addEventListener("mouseleave", () => {
+  closeTimer = setTimeout(() => {
+    dropdown.classList.remove("active");
+  }, 250); // smooth close
+});
+
+/* Click support (desktop + mobile) */
+dropdown
+  .querySelector(".dropdown-toggle")
+  .addEventListener("click", (e) => {
+    e.stopPropagation();
+    dropdown.classList.toggle("active");
+  });
+
+/* Close when clicking outside */
+document.addEventListener("click", () => {
+  dropdown.classList.remove("active");
+});
+
+
+  /* Smooth Scroll */
+  navLinks.forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      document.querySelector(link.getAttribute("href"))
+        .scrollIntoView({ behavior: "smooth" });
+    });
+  });
+
+  /* Discover Button */
+  const discoverBtn = document.getElementById("discoverBtn");
+  if (discoverBtn) {
+    discoverBtn.addEventListener("click", () => {
+      document.querySelector("#about")
+        .scrollIntoView({ behavior: "smooth" });
+    });
+  }
+
+  /* Scroll Reveal */
+  const reveals = document.querySelectorAll(".reveal");
+
+  function revealOnScroll() {
+    reveals.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      if (top < window.innerHeight - 100) {
+        el.classList.add("active");
+      }
+    });
+  }
+
+  revealOnScroll();
+
+
+
+/* ================= LOGIN / PROFILE ================= */
+const user = JSON.parse(localStorage.getItem("user"));
+
+const loginBtn = document.getElementById("loginBtn");
+const profileBox = document.getElementById("profileBox");
+
+if (user) {
+  loginBtn.style.display = "none";
+  profileBox.style.display = "flex";
+  const loginBtn = document.getElementById("loginBtn");
+const user = JSON.parse(localStorage.getItem("loggedUser"));
+
+if (user && loginBtn) {
+  loginBtn.innerText = "Profile";
+  loginBtn.href = "profile.html";
+}
+
+  document.getElementById("profileName").innerText = user.name;
+  document.getElementById("profileImg").src =
+    user.picture || `https://ui-avatars.com/api/?name=${user.name}`;
+}
+
+function logout() {
+  localStorage.removeItem("user");
+  window.location.href = "login.html";
+}
+function toggleBot() {
+  const bot = document.getElementById("chatbot");
+  bot.style.display = bot.style.display === "flex" ? "none" : "flex";
+}
+
+function sendMessage() {
+  const input = document.getElementById("userInput");
+  const msg = input.value.trim();
+  if (!msg) return;
+
+  const chatBody = document.getElementById("chatBody");
+
+  chatBody.innerHTML += <div class="user-msg">${msg}</div>;
+  input.value = "";
+
+  setTimeout(() => {
+    chatBody.innerHTML += <div class="bot-msg">${getBotReply(msg)}</div>;
+    chatBody.scrollTop = chatBody.scrollHeight;
+  }, 600);
+} 
+
+
+/* ================= PAGE TRANSITION JS ================= */
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.add("page-transition");
+
+  requestAnimationFrame(() => {
+    document.body.classList.add("show");
+  });
+
+  document.querySelectorAll("a").forEach(link => {
+    if (link.href && !link.href.includes("#")) {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        document.body.classList.remove("show");
+
+        setTimeout(() => {
+          window.location.href = link.href;
+        }, 400);
+      });
+    }
+  });
+});
+</script>
+</html>
